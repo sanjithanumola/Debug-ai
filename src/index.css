@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #0f1117;
+  --color-card-dark: #1a1d27;
+  --color-border-dark: #2d3343;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-slate-200 antialiased;
+  }
+}
+
+.monaco-editor-container {
+  border: 1px solid var(--color-border-dark);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.markdown-body {
+  @apply text-sm leading-relaxed space-y-4;
+}
+
+.markdown-body p {
+  @apply text-slate-300;
+}
+
+.markdown-body code {
+  @apply bg-slate-800 px-1.5 py-0.5 rounded text-indigo-300 font-mono text-xs;
+}
+
+.markdown-body pre {
+  @apply bg-slate-900 p-4 rounded-lg border border-slate-800 my-4 overflow-x-auto;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside space-y-2;
+}
+
+.markdown-body li {
+  @apply text-slate-300;
+}
